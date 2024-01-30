@@ -2,6 +2,60 @@
 \label{cp:answers}
 \section{Question 1}
 \begin{importantbox}
-    This is the question.
+    You should review and understand the concepts of wind tunnel and wind tunnel testing.
 \end{importantbox}
-\noindent{}This is the answer.
+
+Engineers use wind tunnels to simulate and study the effects of airflow on scaled-down models of large objects—e.g., airfoils, wings, cars, objects, etc.—in a controlled environment. Engineers can use the data collected from wind tunnel testing to analyze aerodynamic performance—e.g., lift, drag, pressure, etc.—and an object's or system's dynamics. In addition to analysis, wind tunnel testing facilitates the design and optimization of aerodynamic components or systems.
+
+\section{Question 2}
+\begin{importantbox}
+    You should know the system setup of a typical low-speed wind tunnel and the functions of each component of the low‐speed wind tunnel.
+\end{importantbox}
+
+A typical low-speed wind tunnel has—at a minimum—a fan, contraction cone, test section, diffuser, and instrumentation and can be either closed- or open-looped \citep{Hall_2021a, Hall_2021b}. The fan generates controlled airflow, which speeds up as it travels through the contraction cone. After the contraction cone, the airflow enters the test section, where the model being analyzed is positioned. The airflow then exits the test section and enters the diffusion section, slowing down. Throughout the wind tunnel, a various instruments take measurements of velocity, pressure, temperature, etc.
+
+\section{Question 3}
+\begin{importantbox}
+    You should review and understand the concepts of Bernoulli’s equation.
+\end{importantbox}
+
+Bernoulli’s equation, \autoref{eq:bernoullis_eqn}, describes the relationship between fluid pressure, velocity, and potential energy. It states that, as long as energy is conserved, when fluid speed increases, the fluid pressure decreases and vice versa. The equation is defined as
+
+\begin{equation} \label{eq:bernoullis_eqn}
+    P_1 + \frac{1}{2} \rho{} v_1^2 + \rho{} g h_1 = P_2 + \frac{1}{2} \rho{} v_2^2 + \rho{} g h_2
+\end{equation}
+
+\noindent where $\rho$ is fluid density; $g$ is the acceleration due to gravity; $P_1$ is the pressure, $v_1$ is the fluid velocity, and $h_1$ is the height of the fluid at point one; and $P_2$ is the pressure, $v_2$ is the fluid velocity, and $h_2$ is the height of the fluid at point two \citep{Khan_Academy}.
+
+Following the derivation in \citet{Khan_Academy}, if we assume the change in height is negligible relative to the speed and pressure, then \autoref{eq:bernoullis_eqn} can be simplified to
+
+\begin{align}
+    P_1 + \frac{1}{2} \rho{} v_1^2 &= P_2 + \frac{1}{2} \rho{} v_2^2 \nonumber \\
+    P + \frac{1}{2} \rho{} v^2 &= \text{constant} \label{eq:bernoullis_prin}
+\end{align}
+
+\noindent which more elegantly demonstrates Bernoulli's principle: for an incompressible flow, an increase in pressure is accompanied by a decrease in velocity and vice versa.
+
+\section{Question 4}
+\begin{importantbox}
+    You should understand the concept of a pitot‐static probe and how to use it for low‐speed flow velocity measurements.
+\end{importantbox}
+
+In the context of pitot-static probes, \autoref{eq:bernoullis_prin} can be redefined as
+
+\begin{equation} \label{eq:total_pressure}
+    P_s + \frac{1}{2} \rho v^2 = P_t
+\end{equation}
+
+\noindent where $P_s$ is static pressure, $\rho$ is density, $v$ is velocity, and $P_t$ is the total pressure \citep{Hall_2023}. The $\frac{1}{2} \rho v^2$ term in \autoref{eq:total_pressure} is defined as the dynamic pressure.
+
+Pitot-static probes are positioned on the outside of an aircraft and serve as the ``speedometer'' of an aircraft. \citet{Hall_2023} describes a typical pitot-static probe as having at least two openings connected to a pressure transducer that measures the air pressure. One opening is in line with the flow direction and measures the total pressure, $P_t$. The other openings are oriented orthogonally to the flow direction and measure the static pressure, $P_s$.
+
+Using the measured values of $P_s$ and $P_t$, \autoref{eq:total_pressure} can be rearranged to solve for velocity as shown below:
+
+\begin{align}
+    \frac{1}{2} \rho v^2 &= P_t - P_s \nonumber \\
+    v &= \sqrt{\frac{2}{\rho} \left(P_t - P_s\right)} \label{eq:velocity_from_bernoullis}
+\end{align}
+
+\noindent where $v$ is the fluid velocity and, in the context of aerodynamics, approximately an aircraft's airspeed.
